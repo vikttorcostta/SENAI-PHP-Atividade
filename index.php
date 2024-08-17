@@ -1,12 +1,16 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Conta Bancaria</title>
-</head>
-<body>
-    
-    
-</body>
-</html>
+<?php
+
+require __DIR__ . '/src/routes/routes.php';
+
+$request = $_SERVER['REQUEST_URI'];
+
+function route ($url, $callback){
+    if($url == $_SERVER['REQUEST_URI']){
+        $callback();
+        exit();
+    }
+}
+
+http_response_code(404);
+echo "Página não encontrada";
+
