@@ -2,18 +2,20 @@
 
 namespace Pessoa;
 
+use DateTime;
+
 require __DIR__ . 'vendor/autoload.php';
 
 
 class Pessoa {
     
-    public int $codigo;
-    public string $nome;
-    public float $altura;
-    public int $idade;
-    public string $dataNascimento;
-    public string $escolaridade;
-    public float $salario;
+    private int $codigo;
+    private string $nome;
+    private float $altura;
+    private int $idade;
+    private string $dataNascimento;
+    private string $escolaridade;
+    private float $salario;
 
     public function __construct($codigo,$nome, $altura, $idade, $dataNascimento, $escolaridade, $salario){
         
@@ -27,15 +29,15 @@ class Pessoa {
         
     }
 
-    public function crescer($centimetros){
+    public function crescer(float $centimetros){
         $this->altura += $centimetros;
     }
 
-    public function formar($titulo) {
+    public function formar(string $titulo) {
         $this->escolaridade = $titulo;
     }
 
-    public function envelhecer ($idade){
+    public function envelhecer (int $idade){
         $this->idade += $idade;
     }
 
@@ -47,15 +49,15 @@ class Pessoa {
         $this->nome = $nome;
     }
 
-    public function getNome(){
+    public function getNome(): string{
         return $this->nome;
     }
 
-    public function setAltura($altura){
+    public function setAltura(float $altura){
         $this->altura = $altura;
     }
 
-    public function getAltura(){
+    public function getAltura(): int{
         return $this->altura;
     }
 
@@ -63,15 +65,16 @@ class Pessoa {
         $this->idade = $idade;
     }
 
-    public function getIdade(){
+    public function getIdade(): int{
         return $this->idade;
     }
 
     public function setDataNascimento($dataNascimento){
-        $this->dataNascimento = $dataNascimento;
+        $data = DateTime::createFromFormat('d-m-Y', $dataNascimento);
+        $this->dataNascimento = $data;
     }
 
-    public function getDataNascimento(){
+    public function getDataNascimento(): string{
         return $this->dataNascimento;
     }
 
@@ -79,7 +82,7 @@ class Pessoa {
         $this->escolaridade = $escolaridade;
     }
 
-    public function getEscolaridade(){
+    public function getEscolaridade(): string {
         return $this->escolaridade;
     }
 
@@ -87,9 +90,8 @@ class Pessoa {
         $this->salario = $salario;
     }
 
-    public function getSalario(){
+    public function getSalario(): float{
         return $this->salario;
     }
-
 
 }

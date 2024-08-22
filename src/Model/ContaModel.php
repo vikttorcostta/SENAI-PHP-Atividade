@@ -10,13 +10,13 @@ require __DIR__ . '/vendor/autoload.php';
 
 class Conta {
 
-    public string $agencia;
-    public string $cod;
-    public string $dataDeCriacao;
-    public string $senha;
-    public float $saldo;
-    public bool $cancelada;
-    public Pessoa $titular;
+    private string $agencia;
+    private string $cod;
+    private string $dataDeCriacao;
+    private string $senha;
+    private float $saldo;
+    private bool $cancelada;
+    private Pessoa $titular;
 
     public function __construct($agencia, $cod, $dataDeCriacao, $senha, $saldo, $cancelada, Pessoa $titular)
     {
@@ -28,6 +28,10 @@ class Conta {
         $this->cancelada = $cancelada;
         $this->titular = $titular;
     }
+
+    /**
+     * METODOS
+     */
 
     public function retirar(float $valor): void {
 
