@@ -17,16 +17,9 @@ class Pessoa {
     private string $escolaridade;
     private float $salario;
 
-    public function __construct($codigo,$nome, $altura, $idade, $dataNascimento, $escolaridade, $salario){
+    public function __construct(){
         
-        $this->codigo = $codigo;
-        $this->nome = $nome;
-        $this->altura = $altura;
-        $this->idade = $idade;
-        $this->dataNascimento = $dataNascimento;
-        $this->escolaridade = $escolaridade;
-        $this->salario = $salario;
-        
+    
     }
 
     public function crescer(float $centimetros){

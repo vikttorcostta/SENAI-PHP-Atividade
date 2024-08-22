@@ -18,15 +18,10 @@ class Conta {
     private bool $cancelada;
     private Pessoa $titular;
 
-    public function __construct($agencia, $cod, $dataDeCriacao, $senha, $saldo, $cancelada, Pessoa $titular)
+    public function __construct($agencia, $cod, $dataDeCriacao, $senha, $saldo, $cancelada, Pessoa $titular, $codigo, $nome)
     {
-        $this->agencia = $agencia;
-        $this->cod = $cod;
-        $this->dataDeCriacao = $dataDeCriacao;
-        $this->senha = $senha;
-        $this->saldo = $saldo;
-        $this->cancelada = $cancelada;
-        $this->titular = $titular;
+        $this->titular = new Pessoa();
+        $this->titular->setNome($nome);
     }
 
     /**
