@@ -4,26 +4,29 @@ namespace Conta;
 
 use DateTime;
 use Exception;
+use Pessoa\Pessoa;
 
 require __DIR__ . '/vendor/autoload.php';
 
 class Conta {
 
     public string $agencia;
-    public string $codigo;
+    public string $cod;
     public string $dataDeCriacao;
     public string $senha;
     public float $saldo;
     public bool $cancelada;
+    public Pessoa $titular;
 
-    public function __construct($agencia, $codigo, $dataDeCriacao, $senha, $saldo, $cancelada)
+    public function __construct($agencia, $cod, $dataDeCriacao, $senha, $saldo, $cancelada, Pessoa $titular)
     {
         $this->agencia = $agencia;
-        $this->codigo = $codigo;
+        $this->cod = $cod;
         $this->dataDeCriacao = $dataDeCriacao;
         $this->senha = $senha;
         $this->saldo = $saldo;
         $this->cancelada = $cancelada;
+        $this->titular = $titular;
     }
 
     public function retirar(float $valor): void {
@@ -66,11 +69,11 @@ class Conta {
     }
 
     public function setCodigo(string $codigo){
-        $this->codigo = $codigo;
+        $this->cod = $codigo;
     }
 
     public function getCodigo(): string{
-        return $this->codigo;
+        return $this->cod;
     }
 
     public function setDataDeCriacao (string $dataDeCriacao){
