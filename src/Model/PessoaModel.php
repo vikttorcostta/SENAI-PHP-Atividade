@@ -27,4 +27,69 @@ class Pessoa {
         
     }
 
+    public function crescer($centimetros){
+        $this->altura += $centimetros;
+    }
+
+    public function formar($titulo) {
+        $this->escolaridade = $titulo;
+    }
+
+    public function envelhecer ($idade){
+        $this->idade += $idade;
+    }
+
+    /**
+     * METÓDOS GETTERS E SETTERS
+     */
+
+     public function setNome($nome){
+        $this->nome = $nome;
+    }
+
+    public function getNome(){
+        return $this->nome;
+    }
+
+    public function setAltura($altura){
+        $this->altura = $altura;
+    }
+
+    public function getAltura(){
+        return $this->altura;
+    }
+
+    public function setIdade($idade){
+        $this->idade = $idade;
+    }
+
+    public function getIdade(){
+        return $this->idade;
+    }
+
+    public function setDataNascimento($dataNascimento){
+        $this->dataNascimento = $dataNascimento;
+    }
+
+    public function getDataNascimento(){
+        return $this->dataNascimento;
+    }
+
+    public function setEscolaridade($escolaridade){
+        $this->escolaridade = $escolaridade;
+    }
+
+    public function getEscolaridade(){
+        return $this->escolaridade;
+    }
+
+    public function setSalario($salario){
+        $this->salario = $salario;
+    }
+
+    public function getSalario(){
+        return $this->salario;
+    }
+
+
 }
