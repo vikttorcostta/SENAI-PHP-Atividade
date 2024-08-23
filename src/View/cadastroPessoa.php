@@ -39,7 +39,8 @@
             </div>
             <div>
                 <label for="" class="form-label">Escolaridade</label>
-                <input type="text" class="form-control" name="escolaridade">
+                <input type="radio" class="form-control" name="escolaridade" value="EnsinoMédioTécnico">Ensino Médio Técnico
+                <input type="radio" class="form-control" name="escolaridade" value="EnsinoSuperior">Ensino Superior
             </div>
             <div>
                 <label for="" class="form-label">Salário</label>
