@@ -1,6 +1,6 @@
 <?php
 
-
+  
 
 ?>
 
@@ -20,7 +20,7 @@
 
     <div class="container">
         <h2>Criar Conta</h2>
-            <form action="" method="post">
+            <form action="./model/interface.php" method="post">
                 <div class="mb-3">
                     <label for="" class="form-label">Agência</label>
                     <input class="form-control" type="number" name="agencia">
@@ -47,6 +47,7 @@
                 </div>
 
                 <button type="submit"></button>
+
             </form>
     </div>
 

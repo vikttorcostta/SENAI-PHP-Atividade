@@ -1,15 +1,16 @@
 <?php
 
-require __DIR__ . '/../View/cadastoConta.php';
-require __DIR__ . '/../View/cadastroPessoa.php';
-require __DIR__ . '/../View/loginPessoa.php';
-require __DIR__ . '/../View/paginaPrincipal.php';
+
 
 route('/', function () {
-    return '/../View/paginaPrincipal.php';
+   exit(1);
 });
 
-route('/login', function () {
-    echo "login";
+route('/cadastroPessoa', function () {
+    echo 'cadastroPessoa';
+});
+
+route('/cadastroConta', function () {
+    echo 'cadastroConta';
 });
 

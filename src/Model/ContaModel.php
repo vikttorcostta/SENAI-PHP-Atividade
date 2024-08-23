@@ -18,14 +18,24 @@ class Conta {
     private bool $cancelada;
     private Pessoa $titular;
 
-    public function __construct($agencia, $cod, $dataDeCriacao, $senha, $saldo, $cancelada, Pessoa $titular, $codigo, $nome)
+    public function __construct($agencia, $cod, $dataDeCriacao, $senha, $saldo, $cancelada, Pessoa $titular)
     {
-        $this->titular->setNome($nome);
+        $this->agencia = $agencia;
+        $this->cod = $cod;
+        $this->dataDeCriacao = $dataDeCriacao;
+        $this->senha = $senha;
+        $this->saldo = $saldo;
+        $this->cancelada = $cancelada;
     }
 
     /**
      * METODOS
      */
+
+     public function setTitular(Pessoa $pessoa){
+        $this->titular = $pessoa;
+
+     }
 
     public function retirar(float $valor): void {
 
