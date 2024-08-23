@@ -3,7 +3,7 @@
         'name' => 'viktt/senai-php-atividade',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '32aa4d9c9cbeda07ce42cef733a9100cf6996ddc',
+        'reference' => 'f0c26a2bd08b526c1bea42832af018c985241fa2',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -13,7 +13,7 @@
         'viktt/senai-php-atividade' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '32aa4d9c9cbeda07ce42cef733a9100cf6996ddc',
+            'reference' => 'f0c26a2bd08b526c1bea42832af018c985241fa2',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
