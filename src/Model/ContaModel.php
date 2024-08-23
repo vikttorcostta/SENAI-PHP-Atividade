@@ -20,7 +20,6 @@ class Conta {
 
     public function __construct($agencia, $cod, $dataDeCriacao, $senha, $saldo, $cancelada, Pessoa $titular, $codigo, $nome)
     {
-        $this->titular = new Pessoa();
         $this->titular->setNome($nome);
     }
 

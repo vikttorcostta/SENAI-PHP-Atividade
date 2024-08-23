@@ -20,7 +20,7 @@
 
 <div class="container">
     <h2>Criar Conta Pessoa</h2>
-        <form action="" method="post">
+        <form action="./model/interface.php" method="post">
             <div class="mb-3">
                 <label for="" class="form-label">Nome</label>
                 <input class="form-control" type="text" name="nome">
@@ -47,7 +47,7 @@
                 <input calss="form-control" type="number" name="salario">
             </div>
 
-            <button type="submit"></button> 
+            <button type="submit" value="Enviar"></button> 
         </form>
     </div>
 
