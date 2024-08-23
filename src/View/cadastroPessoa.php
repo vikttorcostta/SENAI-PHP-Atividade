@@ -20,7 +20,7 @@
 
 <div class="container">
     <h2>Criar Conta Pessoa</h2>
-        <form action="">
+        <form action="" method="post">
             <div class="mb-3">
                 <label for="" class="form-label">Nome</label>
                 <input class="form-control" type="text" name="nome">
