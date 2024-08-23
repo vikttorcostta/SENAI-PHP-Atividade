@@ -43,7 +43,7 @@
                 </div>
                 <div>
                     <label for="" class="form-label">Cancelada</label>
-                    <input type="checkbox" name="cancelada">
+                    <input class="form-control" type="checkbox" name="cancelada">
                 </div>
 
                 <button type="submit"></button>
