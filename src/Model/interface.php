@@ -1,8 +1,8 @@
 <?php
 
 
-include __DIR__ . '../model/PessoaModel.php';
-include __DIR__ . '../model/ContaModel.php';
+include __DIR__ . '/model/PessoaModel.php';
+include __DIR__ . '/model/ContaModel.php';
 
 use Conta\Conta;
 use Pessoa\Pessoa;

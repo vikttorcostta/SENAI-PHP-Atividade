@@ -26,6 +26,7 @@ class Conta {
         $this->senha = $senha;
         $this->saldo = $saldo;
         $this->cancelada = $cancelada;
+        $this->titular = $titular;
     }
 
     /**
