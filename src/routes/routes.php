@@ -1,9 +1,8 @@
 <?php
 
 
-
 route('/', function () {
-   exit(1);
+   require __DIR__ . '/view/paginaPrincipal.php';
 });
 
 route('/cadastroPessoa', function () {
