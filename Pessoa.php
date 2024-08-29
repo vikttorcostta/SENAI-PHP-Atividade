@@ -1,8 +1,6 @@
 <?php
-/**
- * Representa a abstração de pessoa
- * @author Leonardo <leonardo.lucena@ba.docente.senai.br> 
- */
+
+
 class Pessoa {
     private $nome;              // string
     private $codigo;            // int
