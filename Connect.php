@@ -22,7 +22,8 @@ class Connect extends PDO {
     private $password = PASSWORD;
 
     private function __construct(){
-
+    
+        // evita que o objeto seja instanciado fora da classe
         try {
 
             $dataSourceName = "{mysql:host=$this->servername;dbname=$this->database;charset=utf8}";
@@ -38,7 +39,7 @@ class Connect extends PDO {
     }
 
     // metodo cria uma instancia, caso não tenha. Se tiver ele retorna a que já tem criada
-    public static function getInstance (){
+    public static function getInstance () {
 
         if (self::$instance === null) {
 
@@ -49,7 +50,7 @@ class Connect extends PDO {
     }
 
     //retorna a conexão
-    public function getConnection (){
+    public function getConnection () {
 
         return $this->connection;
 
@@ -59,3 +60,9 @@ class Connect extends PDO {
 
     //private function __wakeup(){}
 }
+
+
+$conn = new Connect();
+$conn->getConnection();
+
+var_dump(Connect::getInstance(), $conn->getConnection());
