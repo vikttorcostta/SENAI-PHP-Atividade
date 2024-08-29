@@ -1,8 +1,6 @@
 <?php
-/**
- * Representa a abstração de conta
- * @author Leonardo <leonardo.lucena@ba.docente.senai.br> 
- */
+
+
 class Conta {
     private $agencia;           // int
     private $codigo;             // int

@@ -1,7 +1,10 @@
 <?php 
 
-include 'Pessoa.php';
-include 'Conta.php';
+use Pessoa;
+use Conta;
+
+require __DIR__ . 'Pessoa.php';
+require __DIR__ . 'Conta.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     //Dados da pessoa
