@@ -4,11 +4,10 @@
  * @author Victor Costa <@vikttorcostta>
  */
 
-namespace Config;
 
 //CONFIGURAÇÃO DO BANCO DE DADOS
 
-const DATABASE = '';
-const USERNAME = '';
+const DATABASE = 'victorsenai';
+const USERNAME = 'root';
 const PASSWORD = '';
-const SERVERNAME = '';
+const SERVERNAME = 'localhost';

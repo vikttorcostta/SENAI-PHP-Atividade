@@ -4,36 +4,35 @@
  * @author Victor Costa <@vikttorcostta>
  */
 
-namespace Database;
+namespace Connect;
 
-include __DIR__ . 'config.php';
+include './config.php';
 
 use PDO;
 use PDOException;
 
-use const Config\DATABASE;
-use const Config\PASSWORD;
-use const Config\SERVERNAME;
-use const Config\USERNAME;
 
-class Database extends PDO {
+class Connect extends PDO {
     
+    private static $instance = [];
+    private $connection;
     private $database = DATABASE;
     private $username = USERNAME;
     private $servername = SERVERNAME;
     private $password = PASSWORD;
 
-    private static $instance = [];
-    private $connection;
-
     private function __construct(){
 
-        try{
+        try {
+
             $dataSourceName = "{mysql:host=$this->servername;dbname=$this->database;charset=utf8}";
+            parent::__construct($dataSourceName, $this->username, $this->password);
+            
             $this->connection = new PDO($dataSourceName, $this->username, $this->password);
             $this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             echo "Banco de dados conectado com sucesso!";
-        }catch (PDOException $e){
+
+        } catch (PDOException $e){
             echo "Erro ao conectar ao banco de dados: " . $e->getMessage();
         }
     }
@@ -43,7 +42,7 @@ class Database extends PDO {
 
         if (self::$instance === null) {
 
-            self::$instance = new Database();
+            self::$instance = new Connect();
         }
 
         return self::$instance;
@@ -58,5 +57,5 @@ class Database extends PDO {
 
     private function __clone() {}
 
-    private function __wakeup(){}
+    //private function __wakeup(){}
 }
