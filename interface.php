@@ -1,5 +1,9 @@
 <?php 
 
+/**
+ * @author Victor Costa <@vikttorcostta>
+ */
+
 use Pessoa;
 use Conta;
 

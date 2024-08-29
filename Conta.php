@@ -1,5 +1,8 @@
 <?php
 
+/**
+ * @author Victor Costa <@vikttorcostta>
+ */
 
 class Conta {
     private $agencia;           // int

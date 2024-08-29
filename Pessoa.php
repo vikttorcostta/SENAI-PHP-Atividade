@@ -1,5 +1,8 @@
 <?php
 
+/**
+ * @author Victor Costa <@vikttorcostta>
+ */
 
 class Pessoa {
     private $nome;              // string
