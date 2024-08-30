@@ -62,6 +62,10 @@ class Connect extends PDO {
 }
 
 
+// Testando a conexão. Está dando erro pois o construtor está privado, para resolver
+// a classe que de Banco de dados quando for criada vai herdar com extends as propriedades
+// da Classe Connect, e os metodos e atributos privados poderão ser acessados.
+
 $conn = new Connect();
 $conn->getConnection();
 
