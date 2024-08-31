@@ -5,7 +5,6 @@
  */
 
 namespace Connect;
-
 include './config.php';
 
 use PDO;
@@ -42,7 +41,7 @@ class Connect extends PDO {
     public static function getInstance () {
 
         if (self::$instance === null) {
-
+            
             self::$instance = new Connect();
         }
 
