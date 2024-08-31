@@ -1,4 +1,5 @@
 <?php 
+
 include 'Connect.php';
 include 'Pessoa.php'; 
 
@@ -11,3 +12,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
 $pessoa = new Pessoa($nome, $telefone, $email);
+$pessoa->cadastrar($nome, $telefone, $email);

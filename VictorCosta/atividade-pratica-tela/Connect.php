@@ -1,18 +1,14 @@
 <?php
 
-include 'config.php';
-
-use PDO;
-use PDOException;
 
 class Connect extends PDO {
 
     private static $instance = [ ];
     private $connection;
-    private $servername = SERVERNAME;
-    private $username = USERNAME;
-    private $password = PASSWORD;
-    private $database = DATABASE;
+    private $servername = "localhost";
+    private $username = "root";
+    private $password = "";
+    private $database = "empresa";
 
     private function __construct(){
         try {

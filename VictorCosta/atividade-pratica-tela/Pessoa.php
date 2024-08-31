@@ -16,6 +16,10 @@ class Pessoa {
 
     public function cadastrar ($nome, $telefone, $email) {
 
+        $this->nome = $nome;
+        $this->telefone = $telefone;
+        $this->email = $email;
+        
         $conn = new Connect();
         $conn->getConnection();
         $stmt = $conn->prepare("INSERT INTO pessoa (nome, telefone, email) VALUES (:nome, :telefone, :email)");
@@ -24,5 +28,7 @@ class Pessoa {
         $stmt->bindParam(':email', $this->email);
         return $stmt->execute();
     }
+
+    
 
 }
